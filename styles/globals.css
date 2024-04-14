@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* styles.css */
+
+.layout {
+    display: flex;
+    min-height: 100vh; /* Make the layout fill the viewport height */
+    flex-direction: column;
+    background-color: #f5f5f5; /* Light gold background */
+  }
+  
+  .header {
+    background-color: #d7b88c; /* Rich gold for the header */
+    color: #fff; /* White text */
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin-right: 1rem;
+  }
+  
+  .nav-links a {
+    color: #fff; /* White text for links */
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .nav-links a:hover {
+    color: #ffd700; /* Gold highlight on hover */
+  }
+  
+  .main {
+    padding: 1rem;
+    flex: 1; /* Make the main content take up remaining space */
+  }
+  
+  .footer {
+    background-color: #d7b88c; /* Rich gold for the footer */
+    color: #fff; /* White text */
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .card {
+    @apply mb-5 block rounded p-4 border border-gray-200 shadow-md;
+  }
+  
+  
+  .primary-button {
+    @apply bg-orange-400 rounded py-2 px-4 shadow-lg outline-none hover:bg-amber-400;
+  }
+  /* bg-#d7b88c */
