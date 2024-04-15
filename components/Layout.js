@@ -6,9 +6,10 @@ import { Store } from '@/utils/Store';
 export default function Layout({ children }) {
   const { state } = useContext(Store);
   const { cart } = state;
+  // console.log(state)
 
   // Calculate total quantity of items in the cart
-  const totalItemsInCart = cart.cartItems.reduce((total, item) => total + item.quantity, 0);
+  const totalItemsInCart = cart.cartItems.length;
 
   return (
     <>

@@ -4,6 +4,7 @@ import Layout from '@/components/Layout';
 import products from '@/utils/data';
 import { useRouter } from 'next/router';
 import { Store } from '@/utils/Store';
+import ProductItem from '@/components/productitem';
 
 export default function ProductScreen() {
   const router = useRouter();
@@ -58,6 +59,10 @@ export default function ProductScreen() {
       });
     }
   };
+
+  if (!product) {
+    return <div>Loading...</div>; // Render a loading message if product is undefined
+  }
 
   return (
     <Layout title={product.name}>
